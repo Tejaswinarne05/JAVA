@@ -1,0 +1,18 @@
+import java.util.Scanner;
+public class eligiblevote{
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+        System.out.println("enter");
+        int age=input.nextInt();
+        if(age>=18){
+             System.out.println("u are eligible for vote");
+        }
+        else if(age<=0){
+             System.out.println("enter he correct age");
+        }
+        else{
+            int v=18-age;
+             System.out.println("u need to wait "+v+" years");
+        }
+    }
+}
