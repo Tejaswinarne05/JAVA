@@ -1,0 +1,17 @@
+public class Demo 
+{
+    public void display(int num) 
+    {
+        System.out.println("You passed an integer: " + num);
+    }
+    public void display(String message) 
+    {
+        System.out.println("You passed a string: " + message);
+    }
+      public static void main(String[] args) 
+    {
+        Demo demo = new Demo();
+        demo.display(10);
+        demo.display("Hello!");
+    }
+}
