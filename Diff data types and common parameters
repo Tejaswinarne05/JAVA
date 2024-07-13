@@ -1,0 +1,17 @@
+public class Demo 
+{
+    public void display(int num, String message) 
+    {
+        System.out.println("integer a string: " + num + ", " + message);
+    }
+    public void display(double num, String message) 
+    {
+        System.out.println("double and string: " + num + ", " + message);
+    }
+        public static void main(String[] args) 
+    {
+        Demo demo = new Demo();
+        demo.display(10, "Hello");
+        demo.display(3.14, "World!");
+    }
+}
