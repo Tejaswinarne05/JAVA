@@ -1,0 +1,18 @@
+public class Demo 
+{
+    public void printMessage(double a) 
+    {
+        System.out.println("You said: " + a);
+    }
+
+    public void printMessage(String message1,String message2,String message3) 
+    {
+        System.out.println("You said:"+message1+" "+message2+" "+message3);
+    }
+    public static void main(String[] args) 
+    {
+        Demo demo = new Demo();
+        demo.printMessage(23.75);
+        demo.printMessage("Hello", "World","!");
+    }
+}
