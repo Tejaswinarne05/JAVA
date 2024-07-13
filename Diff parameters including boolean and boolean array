@@ -1,0 +1,35 @@
+public class Demo {
+
+    public void print(boolean value) {
+        System.out.println("Boolean value: " + value);
+    }
+
+    public void print(boolean[] values) {
+        System.out.print("Boolean array: ");
+        for (boolean value : values) {
+            System.out.print(value + " ");
+        }
+        System.out.println();
+    }
+
+    public void print(int num) {
+        System.out.println("Integer value: " + num);
+    }
+
+    public void print(String message) {
+        System.out.println("String value: " + message);
+    }
+    
+    public static void main(String[] args) {
+        Demo demo = new Demo();
+
+        demo.print(true);
+
+        boolean[] boolArray = {true, false, true};
+        demo.print(boolArray);
+
+        demo.print(50);
+
+        demo.print("Hello");
+    }
+}
