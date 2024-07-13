@@ -1,0 +1,35 @@
+public class MethodOverloadingDemo {
+    public static void main(String[] args) {
+        MethodOverloadingDemo demo = new MethodOverloadingDemo();
+
+        demo.displayMessage();
+
+        demo.displayMessage(34);
+
+        demo.displayMessage("Hello, World!");
+
+        demo.displayMessage(10, 100);
+
+        demo.displayMessage("Hello", "World!");
+    }
+
+    public void displayMessage() {
+        System.out.println("Default message");
+    }
+
+    public void displayMessage(int num) {
+        System.out.println("The number is: " + num);
+    }
+
+    public void displayMessage(String message) {
+        System.out.println("The message is: " + message);
+    }
+
+    public void displayMessage(int num1, int num2) {
+        System.out.println("The sum of the numbers is: " + (num1 + num2));
+    }
+
+    public void displayMessage(String message1, String message2) {
+        System.out.println("The concatenated message is: " + message1 + " " + message2);
+    }
+}
