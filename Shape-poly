@@ -1,0 +1,38 @@
+import java.util.*;
+
+class Shape {
+    public void area() {
+        System.out.println("Shape has area");
+    }
+}
+
+class Circle extends Shape {
+    public void area(int r) {
+        System.out.println("circle:"+ 3.14 * r * r);
+    }
+}
+
+class Rectangle extends Shape {
+    public void area(int l, int b) {
+        System.out.println("Rectangle:"+ l * b); 
+    }
+}
+
+class Triangle extends Shape {
+    public void area(int l, int b) {
+        System.out.println("Triangle:"+ 0.5 * l * b); 
+    }
+}
+
+public class main {
+    public static void main(String[] args) {
+        Circle c1 = new Circle();
+        c1.area(6);
+
+        Rectangle r1 = new Rectangle();
+        r1.area(3, 6);
+
+        Triangle t1 = new Triangle();
+        t1.area(1,2);
+    }
+}
