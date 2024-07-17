@@ -1,0 +1,85 @@
+abstract class File {
+     String filename;
+     boolean isOpen;
+
+    public File(String filename) {
+        this.filename = filename;
+        this.isOpen = false;
+    }
+
+    public void open() {
+        if (!isOpen) {
+            System.out.println("Opening file: " + filename);
+            isOpen = true;
+        } else {
+            System.out.println("File " + filename + " is already open.");
+        }
+    }
+
+    public void close() {
+        if (isOpen) {
+            System.out.println("Closing file: " + filename);
+            isOpen = false;
+        } else {
+            System.out.println("File " + filename + " is already closed.");
+        }
+    }
+
+    public abstract String getInfo();
+}
+class TextFile extends File {
+    public TextFile(String filename) {
+        super(filename);
+    }
+    public String getInfo() {
+        return "Text file: " + filename;
+    }
+}
+class ImageFile extends File {
+     int resolutionX;
+     int resolutionY;
+
+    public ImageFile(String filename, int resolutionX, int resolutionY) {
+        super(filename);
+        this.resolutionX = resolutionX;
+        this.resolutionY = resolutionY;
+    }
+    public String getInfo() {
+        return "Image file: " + filename + ", Resolution: " + resolutionX + "x" + resolutionY;
+    }
+}
+
+class VideoFile extends File {
+     int durationInSeconds;
+
+     VideoFile(String filename, int durationInSeconds) {
+        super(filename);
+        this.durationInSeconds = durationInSeconds;
+    }
+    public String getInfo() {
+        return "Video file: " + filename + ", Duration: " + durationInSeconds + " seconds";
+    }
+}
+public class Main {
+    public static void main(String[] args) {
+        TextFile textFile = new TextFile("document");
+        ImageFile imageFile = new ImageFile("photo", 1920, 1080);
+        VideoFile videoFile = new VideoFile("movie", 120);
+
+        textFile.open();
+        System.out.println(textFile.getInfo());
+        textFile.close();
+
+        System.out.println();
+
+        imageFile.open();
+        System.out.println(imageFile.getInfo());
+        imageFile.close();
+
+        System.out.println();
+
+        videoFile.open();
+        System.out.println(videoFile.getInfo());
+        videoFile.close();
+    }
+}
