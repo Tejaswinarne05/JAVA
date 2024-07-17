@@ -1,0 +1,36 @@
+class Institute {
+    public void details() {
+        System.out.println("Institution");
+    }
+}
+
+class Student extends Institute {
+    public void details(String name, int age, int id) {
+        System.out.println("Name: " + name + ", Age: " + age + ", Student ID: " + id);
+    }
+} 
+
+class Teacher extends Institute {
+    public void details(int id, String name, String subject) {
+        System.out.println("Name: " + name + ", ID: " + id + ", Subject: " + subject);
+    }
+} 
+
+class Staff extends Institute {
+    public void details(int count, String name) {
+        System.out.println("Number of Staff: " + count + ", Name: " + name);
+    }
+} 
+
+public class Main {
+    public static void main(String[] args) {
+        Student c1 = new Student();
+        c1.details("rafii", 1, cse);
+        
+        Teacher r1 = new Teacher();
+        r1.details(2, "smith", "bio");
+        
+        Staff t1 = new Staff();
+        t1.details(3, "ram","hr");
+    }
+}
