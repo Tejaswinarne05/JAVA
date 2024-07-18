@@ -1,0 +1,31 @@
+class Animal 
+{
+    void move() 
+    {
+        System.out.println("move.....");
+    }
+}
+class fish extends Animal 
+{
+    void move() 
+    {
+        System.out.println("water.....");
+    }
+}
+class bird extends Animal
+{
+    void move()
+    {
+        System.out.print("land.....");
+    }
+}
+public class Main 
+{
+    public static void main(String[] args) 
+    {
+        fish f = new fish();
+        bird b = new bird();
+        f.move();  
+        b.move();
+    }
+}
