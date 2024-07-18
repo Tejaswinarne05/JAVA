@@ -1,0 +1,57 @@
+class Shape
+{
+    void area() 
+    {
+        System.out.println("Area.....");
+    }
+    void perimeter()
+    {
+        System.out.println("Perimeter...");
+    }
+}
+class Rectangle extends Shape
+{
+    void area() 
+    {
+    int a=5,b=5;
+    {
+        System.out.println("Area:"+a*b);
+    }
+}
+void perimeter() 
+    {
+    int a=5,b=5;
+    {
+        System.out.println("perimeter:"+(a+b)*2);
+    }
+}
+}
+class Triangle extends Shape
+{
+    void area() 
+    {
+    int a=5,b=5;
+    {
+        System.out.println("Area:"+a*b);
+    }
+}
+void perimeter() 
+    {
+    int a=5,b=5,c=4;
+    {
+        System.out.println("perimeter:"+(a+b+c));
+    }
+}
+}
+public class Main 
+{
+    public static void main(String[] args) 
+    {
+        Rectangle r = new Rectangle();
+        Triangle t = new Triangle();
+        r.area();  
+        r.perimeter();
+        t.area();
+        t.perimeter();
+    }
+}
