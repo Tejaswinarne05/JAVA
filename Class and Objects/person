@@ -1,0 +1,25 @@
+class person{
+    public void getfirst(){
+        System.out.println("person first name");
+    }
+     public void getlast(){
+        System.out.println("person last name");
+     }
+}
+class employee extends person{
+    public void getlast(String name,String title){
+     System.out.println("last name= "+name+"\n"+"employee job title= "+title);
+
+        }
+         public void employeeid(int id){
+             System.out.println(id);
+}
+        
+}
+public class main{
+    public static void main(String[] args){
+        employee c1=new employee();
+        c1.getlast("sai","cse");
+        c1.employeeid(123344);
+    }
+}
