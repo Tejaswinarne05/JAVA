@@ -1,0 +1,27 @@
+class bankaccount{
+    public void withdraw(){
+        System.out.println("withdraw");
+        
+    }
+     public void deposit(){
+        System.out.println(" deposit");
+}
+}
+class savingaccount extends bankaccount{
+    public void withdraw(int bal,int amount){
+        if(bal>100){
+        System.out.println("withdraw "+amount+" successfull");
+     System.out.println("remainng balance = "+(bal-amount));
+
+        }
+        else{
+             System.out.println("insufficient balance");
+        }
+}
+}
+public class main{
+    public static void main(String[] args){
+        savingaccount c1=new savingaccount();
+        c1.withdraw(6000,2000);
+    }
+}
