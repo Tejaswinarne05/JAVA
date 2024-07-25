@@ -1,0 +1,22 @@
+class Animal 
+{
+    void move() 
+    {
+        System.out.println("walk.....");
+    }
+}
+class Cheetah extends Animal 
+{
+    void move() 
+    {
+        System.out.println("run.....");
+    }
+}
+public class Main 
+{
+    public static void main(String[] args) 
+    {
+        Cheetah c = new Cheetah();
+        c.move();  
+    }
+}
