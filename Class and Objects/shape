@@ -1,0 +1,25 @@
+class Shape
+{
+    void getarea() 
+    {
+        System.out.println("Area.....");
+    }
+}
+class Rectangle extends Shape
+{
+    void getarea() 
+    {
+    int a=5,b=5;
+    {
+        System.out.println("Area:"+a*b);
+    }
+}
+}
+public class Main 
+{
+    public static void main(String[] args) 
+    {
+        Rectangle R = new Rectangle();
+        R.getarea();  
+    }
+}
