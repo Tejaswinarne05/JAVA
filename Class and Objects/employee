@@ -1,0 +1,27 @@
+class employee{
+    public void work(){
+        System.out.println("working");
+        
+    }
+     public void salary(){
+        System.out.println(" salary=10000");
+}
+}
+class manager extends employee{
+    public void work(){
+        super.work();
+        System.out.println("manager works");
+        super.salary();
+}
+ public void addemployee(){
+        System.out.println("manager adding a new employee");
+         super.salary();
+}
+}
+public class main{
+    public static void main(String[] args){
+        manager c1=new manager();
+        c1.work();
+        c1.addemployee();
+    }
+}
