@@ -1,0 +1,35 @@
+ class Employee {
+     String name;
+     double salary;
+    public Employee(String name, double salary) {
+        this.name = name;
+        this.salary = salary;
+    }
+    public String getName() {
+        return name;
+    }
+    public double getSalary() {
+        return salary;
+    }
+}
+class Manager extends Employee {
+     String department;
+    public Manager(String name, double salary, String department) {
+        super(name, salary);
+        this.department = department;
+    }
+    public String getDepartment() {
+        return department;
+    }
+}
+public class Main {
+    public static void main(String[] args) {
+      Employee employee = new Employee("ram", 50000);
+      Manager manager = new Manager("shiva", 60000, "IT");
+      System.out.println("Employee Name: " + employee.getName());
+      System.out.println("Employee Salary: " + employee.getSalary());
+      System.out.println("Manager Name: " + manager.getName());
+      System.out.println("Manager Salary: " + manager.getSalary());
+      System.out.println("Manager Department: " + manager.getDepartment());
+    }
+}
