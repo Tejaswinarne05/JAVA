@@ -1,0 +1,12 @@
+public class PM {
+    public static boolean mP(String input, String pattern) {
+        return input.matches(pattern);
+    }
+    public static void main(String[] args) {
+        String phoneNumberPattern = "^\\d{3}-\\d{3}-\\d{4}$";
+        String input1 = "123-456-7890";
+        String input2 = "1234567890";
+        System.out.println("Is \"" + input1 + "\" a valid phone number? " + mP(input1, phoneNumberPattern));
+        System.out.println("Is \"" + input2 + "\" a valid phone number? " + mP(input2, phoneNumberPattern));
+    }
+}
