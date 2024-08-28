@@ -1,0 +1,23 @@
+public class SC{
+    public static String compressString(String input) {
+        StringBuilder compressed = new StringBuilder();
+        int count = 1;
+        for (int i = 1; i <= input.length(); i++) {
+            if (i == input.length() || input.charAt(i) != input.charAt(i - 1)) {
+                compressed.append(input.charAt(i - 1));
+                compressed.append(count);
+                count = 1;
+            } else {
+                count++;
+            }
+        }
+        return compressed.length() < input.length() ? compressed.toString() : input;
+    }
+    public static void main(String[] args) {
+        String input1 = "aabcccccaaa";
+        String input2 = "abcd";
+
+        System.out.println("Compressed string \"" + input1 + "\" is \"" + compressString(input1) + "\"");
+        System.out.println("Compressed string \"" + input2 + "\" is \"" + compressString(input2) + "\"");
+    }
+}
